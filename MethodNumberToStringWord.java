@@ -11,40 +11,38 @@ public class MethodNumberToStringWord {
 	Scanner keyboard = new Scanner(System.in);
 	
 	Scanner in = new Scanner(System.in);
-System.out.print("Please enter a positive integer < 1000: ");
-int input = in.nextInt();
-System.out.println(intName(input));
-}
-/**
-Turns a number into its English name.
-@param number a positive integer < 1,000
-@return the name of the number (e.g. “two hundred seventy four”)
-*/
-public static String intName(int number)
-{
-int part = number; // The part that still needs to be converted
-String name = ""; // The name of the number
-if (part >= 100)
-{
-name = digitName(part / 100) + " hundred";
-part = part % 100;
-}
-if (part >= 20)
-{
-name = name + " " + tensName(part);
-part = part % 10;
-}
-else if (part >= 10)
-{
-name = name + " " + teenName(part);
-part = 0;
-}
-if (part > 0)
-{
-name = name + " " + digitName(part);
-}
-return name;
-}
+	System.out.print("Please enter a positive integer < 1000: ");
+	int input = in.nextInt();
+	System.out.println(intName(input));
+	}
+
+	/**
+		Turns a number into its English name.
+		@param number a positive integer < 1,000
+		@return the name of the number (e.g. “two hundred seventy four”)
+	*/
+
+	public static String intName(int number){
+	int part = number; // The part that still needs to be converted
+	String name = ""; // The name of the number
+
+		if (part >= 100){
+		name = digitName(part / 100) + " hundred";
+		part = part % 100;
+		}
+		if (part >= 20){
+		name = name + " " + tensName(part);
+		part = part % 10;
+		}
+		else if (part >= 10){
+		name = name + " " + teenName(part);
+		part = 0;
+		}
+		if (part > 0){
+		name = name + " " + digitName(part);
+		}
+		return name;
+		}
 
 
 	}//End main method
