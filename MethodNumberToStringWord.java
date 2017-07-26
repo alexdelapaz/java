@@ -10,6 +10,43 @@ public class MethodNumberToStringWord {
 	public static void main(String[] args){
 	Scanner keyboard = new Scanner(System.in);
 	
+	Scanner in = new Scanner(System.in);
+System.out.print("Please enter a positive integer < 1000: ");
+int input = in.nextInt();
+System.out.println(intName(input));
+}
+/**
+Turns a number into its English name.
+@param number a positive integer < 1,000
+@return the name of the number (e.g. “two hundred seventy four”)
+*/
+public static String intName(int number)
+{
+int part = number; // The part that still needs to be converted
+String name = ""; // The name of the number
+if (part >= 100)
+{
+name = digitName(part / 100) + " hundred";
+part = part % 100;
+}
+if (part >= 20)
+{
+name = name + " " + tensName(part);
+part = part % 10;
+}
+else if (part >= 10)
+{
+name = name + " " + teenName(part);
+part = 0;
+}
+if (part > 0)
+{
+name = name + " " + digitName(part);
+}
+return name;
+}
+
+
 	}//End main method
 
 
@@ -63,7 +100,7 @@ public class MethodNumberToStringWord {
 		@param teens an integer 10-19.
 		@return the English name ten-nineteen in a String type.
 	*/
-	public static String tensName(int teens){
+	public static String teenName(int teens){
 		if (teens == 10){
 		return"ten";
 		}
@@ -96,6 +133,39 @@ public class MethodNumberToStringWord {
 		}
 		return"";
 	}
+
+	/**
+		Gives the name of the tens part of a number between 20 and 99.
+		@param number an integer between 20 and 99
+		@return the name of the tens part of the number (“twenty” . . . “ninety”)
+	*/
+	public static String tensName(int number){
+		if (number >= 90){ 
+		return "ninety"; 
+		}
+		if (number >= 80){ 
+		return "eighty"; 
+		}
+		if (number >= 70){ 
+		return "seventy"; 
+		}
+		if (number >= 60){ 
+		return "sixty"; 
+		}
+		if (number >= 50){ 
+		return "fifty"; 
+		}
+		if (number >= 40){ 
+		return "forty"; 
+		}
+		if (number >= 30){ 
+		return "thirty"; 
+		}
+		if (number >= 20){ 
+		return "twenty"; 
+		}
+		return "";
+}
 
 
 }//End class
