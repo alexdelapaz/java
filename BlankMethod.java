@@ -9,6 +9,7 @@ public class BlankMethod {
 
 	public static void main(String[] args){
 	Scanner keyboard = new Scanner(System.in);
+	
 	}//End main method
 
 

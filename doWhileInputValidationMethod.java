@@ -36,7 +36,7 @@ public class doWhileInputValidationMethod {
 	public static int readUntilHigh(int lowValue, int highValue){
 
 		int input;
-		Scanner keyboard =new Scanner(System.in);
+		Scanner keyboard = new Scanner(System.in);
 		do{
 		System.out.print("Enter integers " + lowValue + " - " + highValue + ": ");
 		input=keyboard.nextInt();

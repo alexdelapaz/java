@@ -32,7 +32,6 @@ public class MethodVoidPrintStringSentinel {
 		return;							//Forces method to return
 		}							//Even though void does not return
 
-		
 		for(int i=0; i<blankParamVariable.length()+2; i++){
 		System.out.print("-");
 		}
