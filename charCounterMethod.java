@@ -13,10 +13,10 @@ public class charCounterMethod {
 	String string="hello";
 	char character='o';
 
-	System.out.print("The string\"" + string +"\" has " 
-	+ countChar(string,character) + " ");
+	System.out.print("The string \"" + string +"\" has " 
+	+ countChar(string,character) + " '");
 	System.out.print(character);
- 	System.out.print(" characters in it.");
+ 	System.out.print("' characters in it.");
 
 	
 	}//End main method
