@@ -10,11 +10,13 @@ public class MethodNumberToStringWord {
 	public static void main(String[] args){
 	Scanner keyboard = new Scanner(System.in);
 	
-	Scanner in = new Scanner(System.in);
-System.out.print("Please enter a positive integer < 1000: ");
-int input = in.nextInt();
-System.out.println(intName(input));
-}
+	
+	System.out.print("Please enter a positive integer < 1000: ");
+	int input = keyboard.nextInt();
+	System.out.println(intName(input));
+	}//End main method
+
+
 /**
 Turns a number into its English name.
 @param number a positive integer < 1,000
@@ -47,7 +49,7 @@ return name;
 }
 
 
-	}//End main method
+	
 
 
 
