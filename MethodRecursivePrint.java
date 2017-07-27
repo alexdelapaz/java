@@ -10,12 +10,12 @@ public class MethodRecursivePrint {
 	public static void main(String[] args){
 	Scanner keyboard = new Scanner(System.in);
 	
-	System.out.print("Please enter a desired side length for triangle.");
+	System.out.print("Please enter a desired side length for triangle: ");
 	int input = keyboard.nextInt();
 	printTriangle(input);
 
 
-	System.out.print("Please enter a desired side length for triangle.");
+	System.out.print("Please enter a desired side length for triangle: ");
 	int recursiveInput = keyboard.nextInt();
 
 	printTriangleRecursive(recursiveInput);
@@ -47,7 +47,7 @@ public class MethodRecursivePrint {
 		return;
 		}
 
-		//printTriangleRecursive(sideLength-1);
+		printTriangleRecursive(sideLength-1);
 
 			for(int i=0; i<sideLength; i++){
 			System.out.print("[]");
@@ -55,7 +55,7 @@ public class MethodRecursivePrint {
 			}					//End Recursive interior method
 		System.out.println();
 
-		printTriangleRecursive(sideLength-1);
+		//printTriangleRecursive(sideLength-1);
 
 		
 								//End Recursive exterior method
