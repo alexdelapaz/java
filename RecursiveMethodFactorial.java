@@ -11,7 +11,7 @@ public class RecursiveMethodFactorial {
 	Scanner keyboard = new Scanner(System.in);
 	
 	System.out.print("Enter a number to calculate factorial: ");
-	long input = keyboard.nextDouble();
+	long input = keyboard.nextLong();
 	long output = factorialCalculator(input);
 	System.out.print(output);
 	}//End main method
