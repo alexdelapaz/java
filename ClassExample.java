@@ -2,7 +2,7 @@
 	A class that simulates a data set of a rock band's name
 	and amount of members in the band.
 */
-public class ClassRockBand{
+public class ClassExample{
 	
 	private int members;
 	private String name;
@@ -10,24 +10,24 @@ public class ClassRockBand{
 /**
 	Constructs a rock band taking user input for member amount and name.
 */
-	public ClassRockBand(int members, String name){
+	public ClassExample(int members, String name){
 	this.members=members;
 	this.name=name;	
 	}
 
 /**	Constructs a rock band with cleared member count and name.
 
-	public ClassRockBand(){			//Complicated way - Method call
+	public ClassExample(){			//Complicated way - Method call
 	clear();
 	}//End Constructor
 
-	public ClassRockBand(){			//Complicated way - Assignment
+	public ClassExample(){			//Complicated way - Assignment
 	members = 0;
 	name =  "";
 	}//End Constructor
 */
 
-	public ClassRockBand(){			// this - Constructor method is more simple
+	public ClassExample(){			// this - Constructor method is more simple
 	this(0,"");
 	}
 
@@ -86,7 +86,7 @@ public class ClassRockBand{
 	}
 
 /**
-	Class public  static method to print a phrase.
+	Class public static method to print a phrase.
 */
 	public static String publicStaticPrint(){
 	// privatePrint();			//ERROR- calls privatePrint(); method
@@ -95,12 +95,13 @@ public class ClassRockBand{
 
 /**
 	ClassRockBand toString method.
-
-	public String toString(){
-	System.out.println("Members: "+this.members);
-	System.out.println("Band name: "+this.name);
-	}
 */
+	public String toString(){
+	String result = "toString: \nMembers: "+ this.members + 
+	"\nBand name: " + this.name;
+	return result;
+	}
+
 	
 }//End Class
 
