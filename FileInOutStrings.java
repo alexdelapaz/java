@@ -9,7 +9,7 @@ import java.io.FileNotFoundException;
 import java.io.File;
 import java.io.PrintWriter;
 
-public class FileInOutLines {
+public class FileInOutStrings {
 
 	public static void main(String[] args)  throws FileNotFoundException 
 						//throw exceptions
@@ -40,24 +40,15 @@ public class FileInOutLines {
 	//	readFile.useDelimiter("[^A-Za-z]+");		//Delimiter filters unwanted content based off parameters
 							//Works with readFile.next(); not readFile.nextLine();
 	//read lines
-	while(readFile.hasNextLine()){
-	String wordInput = readFile.nextLine();
-	System.out.println(wordInput);
-	
-	int i =0;
-	while(!Character.isDigit(wordInput(charAt(i))){
-	i++;
+	Scanner readFile = new Scanner(inputFile);
+
+	String countryName = readFile.next();
+	while(!readFile.hasNextInt()){
+	countryName+=" "+readFile.next();
 	}
+	int population=readFile.nextInt();
 
-	String countryName = wordInput.substring(0,i);
-	countryName=countryName.trim();				//Trim white space at the end of words
-
-	String population = wordInput.substring(i);
-
-	System.out.print(countryName+ " " + population + "/n");
-
-
-	}
+	System.out.print(countryName+" "+population);
 
 
 	readFile.close();		//close() Scanner

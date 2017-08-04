@@ -9,7 +9,7 @@ import java.io.FileNotFoundException;
 import java.io.File;
 import java.io.PrintWriter;
 
-public class FileInOutLines {
+public class FileInOutExtractor {
 
 	public static void main(String[] args)  throws FileNotFoundException 
 						//throw exceptions
@@ -35,6 +35,20 @@ public class FileInOutLines {
 									//String literal "C:\\Users\\Alex\\Documents\\GitHub\\JavaLibrary\\input.txt"
 									//String literal "C:\\Users\\Alex\\Documents\\GitHub\\JavaLibrary\\output.txt"				
 									
+	
+	readFile.close();		//close() Scanner
+	outputFile.close();		//close() PrintWriter
+
+	}//End main method
+
+	public static String extractCountry(String input){
+
+	}
+
+	public static double extractValue(String input){
+
+	}
+
 	//Begin here
 
 	//	readFile.useDelimiter("[^A-Za-z]+");		//Delimiter filters unwanted content based off parameters
@@ -62,9 +76,5 @@ public class FileInOutLines {
 	}
 
 
-	readFile.close();		//close() Scanner
-	outputFile.close();		//close() PrintWriter
-
-	}//End main method
 
 }//End class

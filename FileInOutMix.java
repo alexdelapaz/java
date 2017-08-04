@@ -9,7 +9,7 @@ import java.io.FileNotFoundException;
 import java.io.File;
 import java.io.PrintWriter;
 
-public class FileInOutLines {
+public class FileInOutMix {
 
 	public static void main(String[] args)  throws FileNotFoundException 
 						//throw exceptions
@@ -41,24 +41,10 @@ public class FileInOutLines {
 							//Works with readFile.next(); not readFile.nextLine();
 	//read lines
 	while(readFile.hasNextLine()){
-	String wordInput = readFile.nextLine();
-	//	System.out.println(wordInput);
-	
-	int i =0;
-	while(!Character.isDigit(wordInput.charAt(i))){
-	i++;
-	}
-
-	String countryName = wordInput.substring(0,i);
-	countryName=countryName.trim();					//.trim() 		method to trim white space at the end of words
-
-	//	String population = wordInput.substring(i);			//.trim() whitespace from int before parsing
-	//	population = Integer.parseInt(population.trim());
-	int population = Integer.parseInt(wordInput.substring(i));	//Integer.parseInt() 	method
-
-	System.out.printf("%-15s %4d \n", countryName,population);
-
-
+	String countryName = readFile.nextLine();
+	int population = readFile.nextInt();
+	readFile.nextLine();				//Consume newline - nextLine() eats "\n" but nextInt() does not 
+	System.out.println(countryName+population);
 	}
 
 
