@@ -39,7 +39,7 @@ public class FileInOutExtractor {
 		if(area!= 0 ){			
 		density=population/area;
 		}
-		outputFile.printf("%-40s%15.2f\n",country,density);
+		outputFile.printf("%-40s%15.2f\n",countryName,density);
 	}
 
 
@@ -60,7 +60,7 @@ public class FileInOutExtractor {
 	int i=0;
 	while(!Character.isDigit(input.charAt(i))){
 	i++;
-	return line.substring(0, i).trim();
+	return input.substring(0, i).trim();
 	}
 	}//End method
 
@@ -71,13 +71,13 @@ public class FileInOutExtractor {
 */
 	public static double extractValue(String input){
 	int i=0;
-	while(!CharacterisDigit(line.charAt(i))){
-	i++:
-	return Double.parseDouble(line.substring(i).trim());
+	while(!Character.isDigit(input.charAt(i))){
+	i++;
+	return Double.parseDouble(input.substring(i).trim());
 	}
 	}//End method
 
-	//Begin here
+/*	//Begin here
 
 	//	readFile.useDelimiter("[^A-Za-z]+");		//Delimiter filters unwanted content based off parameters
 							//Works with readFile.next(); not readFile.nextLine();
@@ -102,7 +102,7 @@ public class FileInOutExtractor {
 
 
 	}
-
+*/
 
 
 }//End class
