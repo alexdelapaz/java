@@ -1,17 +1,38 @@
 public class ClassExampleMethods{
 
-	private String inString;
-	private int startNum;
-	private int endNum;
+	private String stringOne;
+	private int numOne;
+	private int numTwo;
+	private static int numObjects;
 
-	public ClassExampleMethods(String inString, int startNum, int endNum){
-	this.inString=inString;
-	this.startNum=startNum;
-	this.endNum=endNum;
+	public ClassExampleMethods(String stringOne, int numOne, int numTwo){
+	this.stringOne=stringOne;
+	this.numOne=numOne;
+	this.numTwo=numTwo;
+	numObjects++;
 	}
 
 	public ClassExampleMethods(){
 	this("",0,0);
+	// numObjects++;		//Don't include static variable - it is called in the this() reference.
+	}
+	
+	public String getStringOne(){
+	return stringOne;
+	}
+
+	public int getnumOne(){
+	return numOne;
+	}
+
+	public int getnumTwo(){
+	return numTwo;
+	}
+
+	public boolean areObjectsEqual(ClassExampleMethods inputObject){		//Pass object into a method.
+	return this.stringOne.equalsIgnoreCase(inputObject.getStringOne())
+	&& this.numOne==inputObject.getnumOne()
+	&& this.numTwo==inputObject.getnumTwo();
 	}
 
 	public String substringPull(String inString, int startNum, int endNum){
@@ -23,9 +44,12 @@ public class ClassExampleMethods{
 	return inString.substring(startNum);
 	} 
 
-	public void substringPull(){
-	
+	public void substringPrint(){
 	System.out.println("Substring");
+	}
+
+	public static int amountObjects(){
+	return numObjects;
 	}
 
 }
