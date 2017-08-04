@@ -9,7 +9,7 @@ import java.io.FileNotFoundException;
 import java.io.File;
 import java.io.PrintWriter;
 
-public class FileInOutWords {
+public class FileInOutCharacters {
 
 	public static void main(String[] args)  throws FileNotFoundException 
 						//throw exceptions
@@ -36,14 +36,29 @@ public class FileInOutWords {
 									//String literal "C:\\Users\\Alex\\Documents\\GitHub\\JavaLibrary\\output.txt"				
 									
 	//Begin here
-
-	//	readFile.useDelimiter("[^A-Za-z]+");		//Delimiter filters unwanted content based off parameters
-							//Works with readFile.next(); not readFile.nextLine();
-	//read words
+/*
 	while(readFile.hasNext()){
-	String wordInput = readFile.next();
-	System.out.println(wordInput);
+	String lineInput = readFile.nextLine();
+	System.out.println(lineInput);
 	}
+*/
+	readFile.useDelimiter("");			//"" Empty String Delimiter filters unwanted content based off parameters
+							//Reads one 'Character' at a time
+							//Works with readFile.next(); not readFile.nextLine();
+	//read words only at a time
+	while(readFile.hasNext()){
+	//	String wordInput = readFile.next();
+	//	System.out.println(wordInput);
+	char charInput = readFile.next().charAt(0);		//Works same as processing like String above^
+	System.out.println(charInput);
+
+	//	System.out.println("I digit: " + Character.isDigit(charInput));		//Determines if char isType();
+	}
+										//Character.isDigit();
+										//Character.isLetter();
+										//Character.isUpperCase();
+										//Character.isLowerCase();
+										//Character.isWhiteSpace();
 
 
 	readFile.close();		//close() Scanner
