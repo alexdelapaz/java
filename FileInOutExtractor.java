@@ -17,10 +17,10 @@ public class FileInOutExtractor {
 
 	Scanner keyboard = new Scanner(System.in);
 	
-	Scanner inputFile1 = new Scanner(new file("worldpop.txt"));
-	Scanner inputFile2 = new Scanner(new file("worldarea.txt"));
+	Scanner inputFile1 = new Scanner(new File("worldpop.txt"));
+	Scanner inputFile2 = new Scanner(new File("worldarea.txt"));
 
-	Printwriter outputFile = new Printwriter("world_pop_density.txt"); 
+	PrintWriter outputFile = new PrintWriter("world_pop_density.txt"); 
 
 	//Read nextLine() from each file
 	while(inputFile1.hasNextLine() && inputFile2.hasNextLine()){
@@ -76,6 +76,8 @@ public class FileInOutExtractor {
 	return Double.parseDouble(input.substring(i).trim());
 	}
 	}//End method
+}//End class
+
 
 /*	//Begin here
 
