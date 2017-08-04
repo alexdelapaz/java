@@ -26,7 +26,7 @@ public class FileInOutExtractor {
 	while(inputFile1.hasNextLine() && inputFile2.hasNextLine()){
 	String linesFile1 = inputFile1.nextLine();
 	String linesFile2 = inputFile2.nextLine();
-	}
+	
 	
 	//Extract country and value
 	String countryName = extractCountry(linesFile1);
@@ -60,8 +60,8 @@ public class FileInOutExtractor {
 	int i=0;
 	while(!Character.isDigit(input.charAt(i))){
 	i++;
-	return input.substring(0, i).trim();
 	}
+	return input.substring(0, i).trim();
 	}//End method
 
 /**
@@ -73,11 +73,9 @@ public class FileInOutExtractor {
 	int i=0;
 	while(!Character.isDigit(input.charAt(i))){
 	i++;
-	return Double.parseDouble(input.substring(i).trim());
 	}
+	return Double.parseDouble(input.substring(i).trim());
 	}//End method
-}//End class
-
 
 /*	//Begin here
 
