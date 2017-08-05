@@ -38,7 +38,7 @@ public class FileInOutLines {
 	//Begin here
 
 	//	readFile.useDelimiter("[^A-Za-z]+");		//Delimiter filters unwanted content based off parameters
-							//Works with readFile.next(); not readFile.nextLine();
+								//Works with readFile.next(); not readFile.nextLine();
 	//read lines
 	while(readFile.hasNextLine()){
 	String wordInput = readFile.nextLine();
@@ -53,7 +53,7 @@ public class FileInOutLines {
 	countryName=countryName.trim();					//.trim() 		method to trim white space at the end of words
 
 	//	String population = wordInput.substring(i);			//.trim() whitespace from int before parsing
-	//	population = Integer.parseInt(population.trim());
+	//	int    population = Integer.parseInt(population.trim());
 	int population = Integer.parseInt(wordInput.substring(i));	//Integer.parseInt() 	method
 
 	System.out.printf("%-15s %4d \n", countryName,population);

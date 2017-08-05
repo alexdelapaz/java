@@ -8,13 +8,13 @@ import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.io.File;
 import java.io.PrintWriter;
-
-public class FileInOutStrings {
+import java.io.*;
+public class FileInOutException {
 
 	public static void main(String[] args)  throws FileNotFoundException 
 						//throw exceptions
 						{
-
+try{
 	Scanner keyboard = new Scanner(System.in);
 
 	//Prompt for input and output file names.
@@ -33,25 +33,27 @@ public class FileInOutStrings {
 									//String inputFileString  C:\Users\Alex\Documents\GitHub\JavaLibrary\input.txt
 									//String outputFileString C:\Users\Alex\Documents\GitHub\JavaLibrary\output.txt
 									//String literal "C:\\Users\\Alex\\Documents\\GitHub\\JavaLibrary\\input.txt"
-									//String literal "C:\\Users\\Alex\\Documents\\GitHub\\JavaLibrary\\output.txt"				
-									
-	//Begin here
+									//String literal "C:\\Users\\Alex\\Documents\\GitHub\\JavaLibrary\\output.txt"
 
-	//	readFile.useDelimiter("[^A-Za-z]+");		//Delimiter filters unwanted content based off parameters
-								//Works with readFile.next(); not readFile.nextLine();
-	//read lines
-	String countryName=readFile.next();
-	while(!readFile.hasNextInt()){
-	countryName+=" "+readFile.next();
-	}
-	int population=readFile.nextInt();
 
-	System.out.println("Country: "+countryName+" Population: "+population);
-	outputFile.println("Country: "+countryName+" Population: "+population);
 
-	
+	String inputWord=readFile.nextLine();
 	readFile.close();		//close() Scanner
 	outputFile.close();		//close() PrintWriter
+
+									
+	//Begin here	
+}//End Try
+
+	catch (IOException exception){
+	exception.printStackTrace();
+	System.out.println("Error. Could not open file.");
+	}
+	catch (IllegalArgumentException exception){
+	System.out.println(exception.getMessage());
+	}
+ 
+
 
 	}//End main method
 
