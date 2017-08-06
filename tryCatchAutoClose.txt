@@ -1,0 +1,7 @@
+try (PrintWriter out = new PrintWriter(filename))
+{
+ Write output to out.
+}
+catch (IOException exception){
+ Handle exception.
+}

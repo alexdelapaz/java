@@ -1,3 +1,8 @@
+/**	Alex de la Paz	
+
+
+*/
+
 public class ClassExampleMethods{
 
 	private String stringOne;

@@ -14,37 +14,34 @@ public class FileInOutException {
 	public static void main(String[] args)  throws FileNotFoundException 
 						//throw exceptions
 						{
-try{
+	try{
 	Scanner keyboard = new Scanner(System.in);
-
-	//Prompt for input and output file names.
-	System.out.print("Input file: ");
-	String inputFileString = keyboard.next();
 	System.out.print("Outputfile: ");
-	String outputFileString = keyboard.next();			//*next() to nextln() can cause it to read extra space.
-						
+	String outputFileString = keyboard.next();
+	PrintWriter outputFile = new PrintWriter(outputFileString);
+							//PrintWriter() Cannot exist withint Try bounds
+	try{
+		//Prompt for input and output file names.
+		System.out.print("Input file: ");
+		String inputFileString = keyboard.next();		
 			
-	File inputFile = new File(inputFileString);	//File class		
-	Scanner readFile = new Scanner(inputFile);	//Scanner input
-							//		Scanner readFile = new Scanner(new File(inputFileString);							
-	PrintWriter outputFile = new PrintWriter(outputFileString);	
-							//PrintWriter class
-									
-									//String inputFileString  C:\Users\Alex\Documents\GitHub\JavaLibrary\input.txt
-									//String outputFileString C:\Users\Alex\Documents\GitHub\JavaLibrary\output.txt
-									//String literal "C:\\Users\\Alex\\Documents\\GitHub\\JavaLibrary\\input.txt"
-									//String literal "C:\\Users\\Alex\\Documents\\GitHub\\JavaLibrary\\output.txt"
+		File inputFile = new File(inputFileString);	//File class		
+		Scanner readFile = new Scanner(inputFile);	//Scanner input
+		
 
+		String inputWord=readFile.nextLine();
 
+		readFile.close();		//close() Scanner
 
-	String inputWord=readFile.nextLine();
-	readFile.close();		//close() Scanner
-	outputFile.close();		//close() PrintWriter
+	}//End Nested Try
 
-									
-	//Begin here	
-}//End Try
+	finally{
+	outputFile.close();
+	}
 
+	}//End Outer Try
+
+	//Catch exceptions
 	catch (IOException exception){
 	exception.printStackTrace();
 	System.out.println("Error. Could not open file.");
@@ -52,7 +49,6 @@ try{
 	catch (IllegalArgumentException exception){
 	System.out.println(exception.getMessage());
 	}
- 
 
 
 	}//End main method

@@ -5,13 +5,11 @@
 
 import java.util.Scanner;
 
-public class BlankMethod {
+public class BlankStaticMethod {
 
 	public static void main(String[] args){
 	Scanner keyboard = new Scanner(System.in);
 	
-	System.out.print(blankMethod(22));
-
 	}//End main method
 
 
