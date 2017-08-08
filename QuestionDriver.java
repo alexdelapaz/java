@@ -31,4 +31,16 @@ public class QuestionDriver{
 
 	}//End Main method
 
+/**
+	Presents the user question and checks the answer
+*/
+
+	public static void presentQuestion(Question q){
+	q.display();
+	System.out.print(Your submission: ");
+	Scanner keyboard = new Scanner(System.in);
+	String submission = keyboard.nextLine();
+	System.out.println(q.checkAnswer(submission);
+	}
+
 }//End class

@@ -26,7 +26,7 @@ public class ChoiceQuestion extends Question{
 	}
 	
 	//Method overrides display() method from superclass
-	public void display(){
+	public void displayQuestion(){
 	super.displayQuestion();			//Call method of the superclass - superclass private variables are not accessible to subclass.
 		for(int i=0; i<choices.size(); i++){
 		int choiceNumber = i +1;

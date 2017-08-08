@@ -6,18 +6,15 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ChoiceQuestionDriver{
+public class QuestionPolymorphicDriver{
 
 	public static void main(String[] args){
 
 	Scanner keyboard = new Scanner(System.in);
 
-	ChoiceQuestion q1 = new ChoiceQuestion();
-	q1.setText("What was the Java languages origional name?");
-	q1.addChoice("Python",false);
-	q1.addChoice("Oak",true);
-	q1.addChoice("C++",false);
-	q1.addChoice("Kotlin",false);
+	Question q1 = new Question();
+	q1.setText("Who invented the Java programming language?");
+	q1.setAnswer("James Gosling");
 
 	ChoiceQuestion q2 = new ChoiceQuestion();
 	q2.setText("What country was the inventor of Java born?");
@@ -26,26 +23,25 @@ public class ChoiceQuestionDriver{
 	q2.addChoice("America",false);
 	q2.addChoice("Australia",false);
 
-	presentQuestion(q1);	
-	presentQuestion(q2);
+	q1.presentQuestion();	//Call Question class
+	q2.presentQuestion();	//Call subclass ChoiceQuestion
+	
+	}//End main method
 
 
-	}//End Main method
-
-	//presentQuestion()Method conained as static in class
-
+	//presentQuestion()Method conained in Question class now - old/ChoiceQuestionDriver
 /**
-	Presents user question and checks answer
-	@param q the question
-*/
 
-	public static void presentQuestion(ChoiceQuestion q){
+	Presents the user question and checks the answer
+
+
+	public static void presentQuestion(Question q){
 	q.displayQuestion();
 	System.out.print("Your submission: ");
 	Scanner keyboard = new Scanner(System.in);
 	String submission = keyboard.nextLine();
 	System.out.println(q.checkAnswer(submission));
 	}
-
+*/
 
 }//End class

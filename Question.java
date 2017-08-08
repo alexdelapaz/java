@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Question{
 
 	private String text;
@@ -43,4 +45,15 @@ public class Question{
 	System.out.println(text);
 	}
 
+/**
+	Presents the user question and checks the answer
+*/
+
+	public void presentQuestion(){
+	displayQuestion();
+	System.out.print("Your submission: ");
+	Scanner keyboard = new Scanner(System.in);
+	String submission = keyboard.nextLine();
+	System.out.println(checkAnswer(submission));
+	}
 }//End class
