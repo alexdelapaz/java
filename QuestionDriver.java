@@ -6,7 +6,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class QuestionDemoA{
+public class QuestionDriver{
 
 	public static void main(String[] args){
 
