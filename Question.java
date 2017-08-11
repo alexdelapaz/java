@@ -56,4 +56,12 @@ public class Question{
 	String submission = keyboard.nextLine();
 	System.out.println(checkAnswer(submission));
 	}
+
+/**
+	Creates toString
+	@return toString
+*/
+	public String toString(){
+	return "\nText: " + text + "\nAnswer: "+answer;
+	}
 }//End class
