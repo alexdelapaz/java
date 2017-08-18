@@ -56,4 +56,14 @@ import java.util.Scanner;
 	String submission = keyboard.nextLine();
 	System.out.println(checkAnswer(submission));
 	}
+
+/**
+	Constructs a toString method
+	@return a String with the Object name and state
+*/
+	public String toString(){
+	return getClass().getName()+"\nText: "+text+"\nMore text: "+moreText;
+	}
+		//getClass().getName() returns class object data type name
+
 }//End class

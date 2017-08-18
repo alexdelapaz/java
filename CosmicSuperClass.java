@@ -13,9 +13,18 @@ public class CosmicSuperClass{
 
 	System.out.println("stringLine="+keyboard);
 
+	System.out.println("Question one has been created.");
 	System.out.println();
 	Question questionOne = new Question();
 	System.out.println("stringLine="+questionOne);
+
+	System.out.println();
+	
+	System.out.println("Question two has been created.");
+	Question questionTwo = new Question();
+	System.out.println("stringLine="+questionTwo);
+
+	System.out.println("Question one and two are equal: "+questionOne.equals(questionTwo));
 
 	}//End main method
 

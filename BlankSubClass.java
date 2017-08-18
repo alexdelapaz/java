@@ -35,5 +35,15 @@ public class BlankSubClass extends BlankSuperClass{
 
 	}
 
+/**
+	Constructs a subClass toString method
+	@return a String with the Object name and state
+*/
+	public String toString(){
+	displayText();
+	return super.toString()+"\nText: ";
+	}
+		//super.toString returns SuperClass object data type name
+
 
 	}//End subclass
