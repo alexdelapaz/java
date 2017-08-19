@@ -36,7 +36,8 @@ public class militaryToCivilianPay{
 	final double RATELOW_SINGLE = 32000;
 	final double RATELOW_MARRIED = 64000;
 
-	double civSal = (milSal*FEDTAXCALC)+(RATELOW_SINGLE*RATELOW);
+	double civSal = (((milSal*FEDTAXCALC)-RATELOW_SINGLE)*RATEHIGH)+(RATELOW_SINGLE*RATELOW);
+	civSal+=milSal;
 	System.out.print("Civilian Salary needed after taxes: "+formater.format(civSal));
 		
 	/*****************
